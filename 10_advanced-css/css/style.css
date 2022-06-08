@@ -1,0 +1,768 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: "Muller";
+    src: local("Muller-Regular"),
+        url("../fonts/MullerRegular.woff2") format("woff2"),
+        url("../fonts/MullerRegular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Muller";
+    src: local("Muller-Light"),
+        url("../fonts/MullerLight.woff2") format("woff2"),
+        url("../fonts/MullerLight.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Muller";
+    src: local("Muller-Medium"),
+        url("../fonts/MullerMedium.woff2") format("woff2"),
+        url("../fonts/MullerMedium.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Muller";
+    src: local("Muller-Bold"),
+        url("../fonts/MullerBold.woff2") format("woff2"),
+        url("../fonts/MullerBold.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root {
+    --white-color: #ffffff;
+    --black-color: #333333;
+    --grey-color: #e5e5e5;
+    --orange-color: #cc9933;
+    --dark-grey: #666666;
+    --lighty-grey: #e1e1e1;
+    --dark-black: #000000;
+    --gold-color: #A47312;
+    --duble-gray-color: #999999;
+    --yellow-color: #E9C479;
+    --yellow-color-two: #FFCC66;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--grey-color);
+    font-family: "Miller", sans-serif;
+    font-weight: 400;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.flex {
+  display: flex;
+}
+
+.header-top {
+  justify-content: space-between;
+}
+
+.header-logo {
+    display: block;
+    margin: 0;
+}
+
+.logo-img {
+    display: block;
+}
+
+.header-bottom {
+    align-items: center;
+    max-width: 1170px;
+    padding: 5px 35px;
+
+}
+
+.header-link-img {
+  color: var(--dark-grey);
+}
+
+.radius {
+    border-radius: 15px;
+    background-color: var(--white-color);
+}
+
+.btn {
+    border-radius: 13px;
+    border: 1px #CC9933 solid;
+    padding: 13px 23px;
+    color: var(--orange-color);
+    background-color: white;
+    transition-property: background, color;
+    transition-duration:  0.3s;
+    transition-timing-function:  ease;
+}
+
+.text-gold-color {
+    color: var(--orange-color);
+}
+
+.title {
+  margin-left: 35px;
+  font-size: 40px;
+}
+
+.header-link {
+    padding-bottom: o;
+    padding-right: 25px;
+}
+
+.strela {
+    display: inline-block;
+    font-size: 18px;
+    padding-left: 30px;
+    background-image: url('../img/стрелка2.png');
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+
+.strela2 {
+    display: inline-block;
+    font-size: 18px;
+    background-image: url('../img/стрелка.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    padding-right: 15px;
+}
+
+.strela2:hover {
+  padding-left: 11px;
+}
+
+.descr-title {
+  margin-right: 200px;
+}
+
+.header-top-right {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.header-container {
+    align-items: center;
+}
+
+.header-top {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.header-top-left {
+    display: flex;
+    align-items: center;
+}
+
+.btn:focus {
+  background: var(--orange-color);
+  color: var(--white-color);
+}
+
+.btn:hover {
+  background: var(--orange-color);
+  color: var(--white-color);
+}
+
+.btn:active {
+  background: var(--gold-color);
+  color: var(--white-color);
+}
+
+
+.header-nav {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts-item-link {
+  margin-left: 34px;
+}
+
+.contact-link {
+  transition-property: color;
+  transition-duration: 0.4s;
+  transition-timing-function: linear;
+}
+
+.contact-link:focus {
+  color: var(--orange-color);
+  outline: 1px #CC9933 solid;
+  outline-offset: 5px;
+}
+
+.contact-link:hover {
+  color: var(--yellow-color);
+}
+
+.contact-link:active {
+  color: var(--gold-color);
+}
+
+.personal-account-link {
+  color: var(--orange-color);
+  transition-property: color;
+  transition-duration: 0.4s;
+  transition-timing-function: linear;
+}
+
+.personal-account-link svg path {
+    transition: fill 0.5s;
+}
+
+.personal-account-link:focus svg path {
+  fill: var(--orange-color);
+}
+
+.personal-account-link:hover svg path {
+  fill: var(--yellow-color);
+}
+
+.personal-account-link:active svg path {
+  fill: var(--gold-color);
+}
+
+
+.personal-account-link {
+  transition-property: color;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+.personal-account-link:focus  {
+  color: var(--orange-color);
+}
+
+.personal-account-link:hover {
+  color: var(--yellow-color);
+}
+
+.personal-account-link:active {
+  color: var(--gold-color);
+}
+
+.card-offer {
+    padding: 40px;
+    border-radius: 15px;
+    background-size: cover;
+}
+
+.card-offer:active {
+  outline: 2px var(--orange-color) solid;
+  outline-offset: 5px;
+}
+
+
+.offer-card-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: var(--white-color);
+    font-family: Muller;
+    font-size: 40px;
+    line-height: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    max-width: 250px;
+}
+
+.more-detailed:focus {
+  color: var(--yellow-color-two);
+}
+
+.more-detailed:hover {
+  color: var(--yellow-color-two);
+}
+
+.more-detailed:active {
+  color: var(--white-color);
+
+}
+
+.lux {
+    font-size: 60px;
+    line-height: 60px;
+}
+.offer-price {
+    display: block;
+    color: var(--white-color);
+    padding-bottom: 47px;
+}
+
+.offfer-card-text {
+  transition-property: color, background;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+
+.special-offers-left {
+    flex-basis: 50%;
+    margin-right: 15px;
+}
+
+.special-offers-right {
+    flex-basis: 50%;
+    margin-left: 15px;
+
+}
+
+.card-offers-left-top {
+    margin-bottom: 30px;
+    max-width: 573px;
+    min-height:258px;
+}
+
+.card-right-offer {
+    min-height: 100%;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+svg:focus {
+  margin-left: 50px;
+}
+
+.servies-card-descr {
+  margin: 0;
+  line-height: 200%;
+}
+
+.servies-card {
+  color: var(--orange-color);
+  margin: 0;
+  transition: color 0.5s;
+}
+
+.servies-card:focus {
+  color: var(--yellow-color);
+}
+
+.servies-card:hover {
+  color: var(--yellow-color) ;
+}
+
+.servies-card:active {
+  color: var(--gold-color);
+}
+
+.img-servies {
+  position: absolute;
+  bottom: 50%;
+  width: 536px;
+  height: 165px;
+
+}
+
+.servies-item {
+    width: 540px;
+    margin-right: 23px;
+    border-radius: 15px;
+    background-color: var(--white-color);
+    padding: 190px 40px 40px 40px;
+    margin-bottom: 23px;
+    background-repeat: no-repeat;
+}
+
+.servies-item:nth-child(2n) {
+    margin-right: 0px;
+}
+
+.servies-item:active {
+  outline: 2px var(--orange-color) solid;
+  outline-offset: 5px;
+}
+
+.advantages-card {
+  width: 258px;
+  min-height: 258px;
+  background-repeat: no-repeat;
+  margin-right: 23px;
+  margin-bottom: 23px;
+  background-position-x: 45px;
+  background-position-y: 41px;
+}
+
+.advantages-card:nth-child(4n) {
+  margin-right: 0px;
+
+}
+
+.advantages-card-text {
+  margin: 0;
+  padding: 116px 42px 41px 45px;
+  line-height: 200%;
+}
+
+.placement-cards {
+
+}
+
+.placement-card {
+  width: 352px;
+  margin-right: 23px;
+  margin-bottom: 23px;
+  background-repeat: no-repeat;
+}
+
+.placement-card:nth-child(3n) {
+    margin-right: 0px;
+}
+
+.placement {
+  box-sizing: border-box;
+}
+
+.placement-img {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.placement-link {
+  color: var(--white-color);
+  font-size: 20px;
+  width: 250px;
+  height: 40px;
+  margin-top: 27px;
+  text-align: center;
+  object-fit: cover;
+  height: 100%;
+}
+
+.img-plac-link:active {
+  outline: 2px var(--orange-color) solid;
+  outline-offset: 5px;
+}
+
+.img-plac-link:hover {
+  cursor: pointer;
+}
+
+.placement-content {
+  padding: 35px 43px 45px 45px;
+}
+
+.placement-descr-card {
+ font-size: 16px;
+}
+.placement-descr-region {
+  padding-right: 44px;
+  max-width: 176px;
+}
+
+.placement-link-img {
+  background-image: url('/img/Rectangle\ 2\ \(1\).png');
+  background-repeat: no-repeat;
+  padding-right: 15px;
+  background-position-x: right;
+  background-position-y: center;
+}
+
+.img-plac-link:hover {
+  cursor: pointer;
+}
+
+.plac-price-img {
+  display: flex;
+  justify-content: space-between;
+}
+
+.plac-link {
+  display: flex;
+  padding-bottom: 20px;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+}
+
+.gray-text {
+  color: var(--duble-gray-color);
+}
+
+.white-text {
+  color: var(--white-color);
+}
+
+.strong {
+  color: var(--dark-black);
+}
+
+.container-blog {
+  border-radius: 15px;
+  background-color: var(--grey-color);
+}
+
+.destiny{
+  margin: 0;
+  padding: 0 18px;
+  border-left: #E1E1E1 1px solid;
+
+}
+
+.destiny:nth-last-child(1) {
+  background-image: none;
+}
+
+.destiny:nth-child(1){
+  padding-left: 0;
+  border-left: none;
+}
+
+.form-title {
+  margin: 0;
+  padding-left: 35px;
+  padding-top: 38px;
+  font-size: 40px;
+}
+
+.form {
+  margin: 19px 45px 71px 45px;
+  background-color: var(--white-color);
+  border-radius: 15px;
+  padding: 28px 31px;
+  display: flex;
+}
+
+.destiny-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+select, input {
+  border: none;
+  border-bottom: 1px #CCCCCC solid;
+  background-color: white;
+}
+
+.label-title {
+  font-size: 12px;
+  margin-bottom: 9px;
+}
+
+.imput-size-left {
+  width: 156px;
+  height: 19px;
+}
+
+.imput-size-right {
+  width: 122px;
+  height: 24px;
+}
+
+.blog {
+  width: 1112px;
+  height: 258px;
+  background-color: var(--lighty-grey);
+}
+
+.blog-btn {
+  margin: 0;
+  display: inline-block;
+}
+
+.contacts-container {
+  display: flex;
+  background-color: var(--white-color);
+  border-radius: 15px;
+  padding: 45px;
+}
+
+.contacts-descr-left {
+  margin-right: 50px;
+  width: 375px;
+}
+
+.contacts-span{
+  font-weight: bold;
+  font-size: 20px;
+  flex-basis: 130px;
+  flex-shrink: 0;
+}
+
+.contacts-li {
+  display: flex;
+  border-bottom: 1px solid #C4C4C4;
+  padding: 25px 0;
+}
+
+.contacts-li:nth-child(1) {
+    padding-top: 0;
+}
+
+.contacts-tel {
+  margin-right: 78px;
+  line-height: 24px;
+}
+
+.contacts-descr {
+  margin: 0;
+  line-height: 24px;
+}
+
+.contacts-email {
+  line-height: 24px;
+}
+
+.contacts-schedule {
+  margin-right: 38px;
+}
+
+.contacts-img-container {
+  display: flex;
+}
+
+.contacts-img{
+  width: 653px;
+  min-height: 528px;
+  align-items: stretch;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn-container {
+  margin-top: 35px;
+}
+
+.contacts-btn {
+    border-radius: 12px;
+    border: 1px #CC9933 solid;
+    padding: 25px 29px;
+    color: var(--orange-color);
+    background-color: white;
+    transition-property: background, color;
+    transition-duration:  0.3s;
+    transition-timing-function:  ease;
+}
+
+.contacts-btn:focus {
+  background: var(--orange-color);
+  color: var(--white-color);
+}
+
+.contacts-btn:hover {
+  background: var(--orange-color);
+  color: var(--white-color);
+}
+
+.contacts-btn:active {
+  background: var(--gold-color);
+  color: var(--white-color);
+}
+
+.footer {
+  display: flex;
+  max-width: 1168px;
+  min-height: 341px;
+  background-color: var(--black-color);
+  background-image: url(../img/sun-logo.png);
+  background-repeat: no-repeat;
+  background-position: 78% 100%;
+  padding: 52px;
+  border-radius: 12px;
+  margin-top: 44px;
+  margin-bottom: 52px;
+}
+
+.footer-p {
+  margin-top: 0;
+  size: 16px;
+  line-height: 30px;
+  padding-bottom: 19px;
+}
+
+.footer-descr {
+  margin: 0;
+}
+
+.footer-descr-left {
+  max-width: 320px;
+  min-height: 178px;
+
+}
+
+.social-link {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 22px;
+}
+.link-foot {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+
+.link-foot svg path  {
+  transition: fill 0.5s;
+}
+
+.link-foot:focus svg path {
+  fill: var(--orange-color);
+}
+
+.link-foot:hover svg path {
+  fill: var(--orange-color);
+}
+
+.link-foot:active svg path {
+  fill: var(--gold-color);
+}
+
+.footer-contacts {
+  margin-left: 100px;
+}
+
+.footer-contact {
+  margin-bottom: 23px;
+  line-height: 23px;
+}
+
+.social-links {
+  margin-left: 203px;
+}
+
+.stretch {
+  align-items: stretch;
+}
